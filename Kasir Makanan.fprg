@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="USER MSI"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-21 10:22:46 PM"/>
+        <attribute name="created" value="VVNFUiBNU0k7RkFIUlVMOzIwMjQtMDItMjE7MDk6MDg6MDcgUE07MjMxNQ=="/>
+        <attribute name="edited" value="VVNFUiBNU0k7RkFIUlVMOzIwMjQtMDItMjE7MTA6MjI6NDYgUE07MTsyNDE0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="bayar, jumlahuang, kembalian, jumlahpesan, total" type="Integer" array="False" size=""/>
+            <declare name="pilih" type="Real" array="False" size=""/>
+            <output expression="&quot;LIST MENU MAKANAN YANG TERSEDIA :&quot;" newline="True"/>
+            <output expression="&quot;===&gt;&gt; 1. AYAM BAKAR &lt;&lt;=== &quot;" newline="True"/>
+            <output expression="&quot;===&gt;&gt; 2. NASI GORENG &lt;&lt;===&quot;" newline="True"/>
+            <output expression="&quot;SILAHKAN MASUKKAN NO SESUAI NO MAKANAN YANG ANDA MAU PESAN&quot;" newline="True"/>
+            <input variable="pilih"/>
+            <if expression="PILIH = 1">
+                <then>
+                    <output expression="&quot;KAMU MEMILIH AYAM BAKAR HARGANYA Rp.25.000,00-&quot;" newline="True"/>
+                    <output expression="&quot;BERAPA YANG KAMU PESAN ?&quot;" newline="True"/>
+                    <input variable="jumlahpesan"/>
+                    <assign variable="total" expression="jumlahpesan * 25000"/>
+                    <output expression="&quot;TOTAL PEMBAYARAN ANDA : &quot; &amp;total" newline="True"/>
+                    <output expression="&quot;SILAHKAN MASUKKAN NILAI UANG ANDA :&quot;" newline="True"/>
+                    <input variable="jumlahuang"/>
+                    <if expression="jumlahuang &gt; total">
+                        <then>
+                            <assign variable="kembalian" expression="jumlahuang - total"/>
+                            <output expression="&quot;TOTAL KEMBALIAN ANDA : &quot; &amp;kembalian" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;MAAF UANG ANDA TIDAK CUKUP :)&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;KAMU MEMILIH NASI GORENG HARGANYA Rp.10.000,00-&quot;" newline="True"/>
+                    <output expression="&quot;BERAPA YANG KAMU PESAN ?&quot;" newline="True"/>
+                    <input variable="jumlahpesan"/>
+                    <assign variable="total" expression="jumlahpesan * 10000"/>
+                    <output expression="&quot;TOTAL PEMBAYARAN ANDA : &quot; &amp;total" newline="True"/>
+                    <output expression="&quot;SILAHKAN MASUKKAN NILAI UANG ANDA :&quot;" newline="True"/>
+                    <input variable="jumlahuang"/>
+                    <if expression="jumlahuang &gt; total">
+                        <then>
+                            <assign variable="kembalian" expression="jumlahuang - total"/>
+                            <output expression="&quot;TOTAL KEMBALIAN ANDA : &quot; &amp;kembalian" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;MAAF UANG ANDA TIDAK CUKUP :)&quot;" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
